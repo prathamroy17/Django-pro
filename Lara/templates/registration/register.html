@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="text-white">
+<h2>registration</h2>
+<form method="POST">
+  {% csrf_token %}
+  {{form.as_p}}
+  <button class="btn btn-primary">Registrer</button>
+
+</form>
+<p> If you have already registerd <a href="{% url 'login' %}" class="btn btn-warning"> login here</a></p>
+</div>
+{% endblock %}
